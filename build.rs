@@ -10,6 +10,7 @@ fn main() {
         .join("LZMA")
         .join("lzmadaptive")
         .join("C");
+    let zlib_dir = PathBuf::from(&manifest_dir).join("zlib");
 
     let mut build = cc::Build::new();
 
@@ -20,7 +21,8 @@ fn main() {
         .flag("-std=c++11")
         .include(&lzma_base)
         .include(lzma_base.join("7zip"))
-        .include(lzma_base.join("Common"));
+        .include(lzma_base.join("Common"))
+        .include(&zlib_dir);
 
     let lzma_lib = lzma_base.join("7zip").join("Compress").join("LZMA_Lib");
     let lzma_src = lzma_base.join("7zip").join("Compress").join("LZMA");
