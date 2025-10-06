@@ -5,7 +5,11 @@ fn main() {
     let manifest_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
 
     let sasquatch_dir = PathBuf::from(&manifest_dir).join("sasquatch");
-    let lzma_base = sasquatch_dir.join("squashfs-tools").join("LZMA").join("lzmadaptive").join("C");
+    let lzma_base = sasquatch_dir
+        .join("squashfs-tools")
+        .join("LZMA")
+        .join("lzmadaptive")
+        .join("C");
 
     let mut build = cc::Build::new();
 
