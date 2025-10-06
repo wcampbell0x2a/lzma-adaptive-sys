@@ -1,0 +1,3 @@
+[submodule "sasquatch"]
+	path = sasquatch
+	url = https://github.com/onekey-sec/sasquatch.git

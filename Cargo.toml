@@ -1,0 +1,12 @@
+[package]
+name = "lzma-adaptive-sys"
+version = "0.1.0"
+authors = ["wcampbell <wcampbell1995@gmail.com>"]
+license = "MIT OR Apache-2.0"
+edition = "2021"
+repository = "https://github.com/wcampbell0x2a/lzma-adaptive-sys"
+description = "FFI bindings to sasquatch's LZMA adaptive library"
+build = "build.rs"
+
+[build-dependencies]
+cc = "1.0"
